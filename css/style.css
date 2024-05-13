@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+	--bs-body-font-family: 'Montserrat';
+	--bs-body-bg: #f8f9fa;
+	background: url("../img/bg.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+.navbar {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.bg-light {
+	--bs-bg-opacity: 0.5 !important;
+}
+
+.card {
+	--bs-card-border-width: 0 !important;
+	justify-content: center;
+	align-items: center;
+	height: 20vh !important;
+}
+
+.bg-dark {
+	opacity: 0.9;
+	border-bottom: 5px solid transparent;
+	background-image: linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+	background-clip: padding-box;
+}
+
+#nav {
+	margin-bottom: 60px;
+}
+
+#header {
+	height: 100vh;
+}
+
+.container a {
+	position: relative;
+}
+
+.img-round {
+	border-radius: 500px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.date {
+    text-align: left;
+	opacity: 0;
+	padding-top: 40px;
+	transform: translateY(-100px);
+	transition: opacity 1.3s, transform 1.3s;
+}
+
+.date.reveal {
+	opacity: 1;
+	padding-top: 40px;
+	transform: translateY(0);
+}
+
+.horizontal-line {
+    width: 95%;
+    height: 2px;
+    background-color: #0824fc;
+    transform: translateX(2.5%);
+    position: absolute;
+}
+
+.homeArrow {
+	opacity: 1;
+	transition: opacity 1.0s;
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+	z-index: 2;
+}
+
+.homeArrow.hide {
+	opacity: 0;
+}
+
+#arrow {
+	opacity: 1;
+	transition: opacity 1.0s;
+}
+
+#arrow.hide {
+	opacity: 0;
+}
+
+#header h1 {
+	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+#header img {
+	max-width: 35%;
+}
+
+#skills img {
+	max-width: 30%;
+}
+
+#footer {
+	background-color: #0825fc1f;
+	--bs-link-color-rgb: #fff;
+}
+
+#footer a {
+	text-decoration: none;
+}

@@ -1,0 +1,96 @@
+.container a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: var(--bs-navbar-color);
+	transform: scaleX(0);
+	transform-origin: right center;
+	transition: transform 0.3s ease;
+}
+
+.container a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left center;
+	transition-duration: 0.4s;
+}
+
+#progressBar {
+	margin-top: 75px;
+	margin-left: 25px;
+    width: 5px;
+    background-color: #0824fc;
+    position: absolute;
+	transition: height 0.8s ease-out;
+	z-index: -1;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in forwards;
+    opacity: 0;
+}
+
+.from-top {
+	animation: fromTop 1.5s ease-in-out forwards;
+    transform: translateY(-120%);
+	opacity: 0;
+}
+
+.reveal-r {
+	opacity: 0;
+	padding-top: 30px;
+	transform: translateX(100px);
+	transition: opacity 1.3s, transform 1.3s;
+}
+
+.reveal-r.reveal {
+	opacity: 1;
+	padding-top: 30px;
+	transform: translateX(0);
+}
+
+.reveal-bot {
+	opacity: 0;
+	padding-top: 30px;
+	transform: translateY(100px);
+	transition: opacity 1.3s, transform 1.3s;
+}
+
+.reveal-bot.reveal {
+	opacity: 1;
+	padding-top: 30px;
+	transform: translateY(0);
+}
+
+.scale-in {
+	opacity: 0;
+	transform: scale(0.5);
+	transition: opacity 1.5s, transform 0.8s;
+}
+
+.scale-in.reveal {
+	opacity: 1;
+	transform: scale(1);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fromTop {
+	from {
+		transform: translateY(-120%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
